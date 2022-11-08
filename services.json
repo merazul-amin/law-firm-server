@@ -1,0 +1,71 @@
+[
+    {
+        "name": "Education Law",
+        "img": "http://html.multipurposethemes.com/lawfirmonepage/lawfirmfour/images/s7.png",
+        "message": "I am very determined for give my client full of service.",
+        "duties": [
+            "Ensuring the student is safe while getting an education",
+            "Seeing that the student is not subjected to improper discipline",
+            "Making certain the students civil rights are not violated",
+            "Providing assistance with education reform",
+            "Monitoring school governance, including student records, school rules and regulations, and employment matters",
+            "Handling special education issues, such as a student not receiving an appropriate education for their abilities. For example, the school may not be accommodating your child needs — or your needs, if you in college — with curriculum changes and equipment."
+        ],
+        "cost": "$250"
+    },
+    {
+        "name": "Trade and Finance Law",
+        "img": "http://html.multipurposethemes.com/lawfirmonepage/lawfirmfour/images/s6.png",
+        "message": "I am very determined for give my client full of service.",
+        "duties": [
+            "Ensuring clients rights",
+            "Unbeatable confidence",
+            "Always ensuring the customers satisfaction."
+        ],
+        "cost": "$200"
+    },
+    {
+        "name": "Accident Law",
+        "img": "http://html.multipurposethemes.com/lawfirmonepage/lawfirmfour/images/s2.png",
+        "message": "I am very determined for give my client full of service.",
+        "duties": [
+            "Ensuring clients rights",
+            "Unbeatable confidence",
+            "Always ensuring the customers satisfaction."
+        ],
+        "cost": "$300"
+    },
+    {
+        "name": "Corporate Law",
+        "img": "http://html.multipurposethemes.com/lawfirmonepage/lawfirmfour/images/s8.png",
+        "message": "I am very determined for give my client full of service.",
+        "duties": [
+            "Ensuring clients rights",
+            "Unbeatable confidence",
+            "Always ensuring the customers satisfaction."
+        ],
+        "cost": "$400"
+    },
+    {
+        "name": "Criminal Law",
+        "img": "http://html.multipurposethemes.com/lawfirmonepage/lawfirmfour/images/s4.png",
+        "message": "I am very determined for give my client full of service.",
+        "duties": [
+            "Ensuring clients rights",
+            "Unbeatable confidence",
+            "Always ensuring the customers satisfaction."
+        ],
+        "cost": "$350"
+    },
+    {
+        "name": "Family Law",
+        "img": "http://html.multipurposethemes.com/lawfirmonepage/lawfirmfour/images/s1.png",
+        "message": "I am very determined for give my client full of service.",
+        "duties": [
+            "Ensuring clients rights",
+            "Unbeatable confidence",
+            "Always ensuring the customers satisfaction."
+        ],
+        "cost": "$200"
+    }
+]

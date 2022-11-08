@@ -52,7 +52,6 @@ async function run() {
 
     app.post('/setReview', async (req, res) => {
         const review = req.body;
-        console.log(review);
         const result = await reviewCollection.insertOne(review);
         res.send(result);
     })
@@ -70,6 +69,14 @@ async function run() {
 
 
     //get user reviews
+
+    app.get('/userReviews', async (req, res) => {
+        const email = req.query.email;
+        const query = { email: email }
+        const cursor = reviewCollection.find(query);
+        const reviews = await cursor.toArray();
+        res.send(reviews);
+    })
 
 
 }
