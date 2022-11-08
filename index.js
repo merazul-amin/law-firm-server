@@ -5,16 +5,25 @@ const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const app = express();
 const port = process.env.PORT || 5000;
 
+
+
 //middleware
 app.use(cors());
 app.use(express.json());
 
+
+
+//mongodb client user
+
 const uri = `mongodb+srv://${process.env.db_user}:${process.env.db_password}@cluster0.jnuj2ye.mongodb.net/?retryWrites=true&w=majority`;
-console.log(uri);
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+
 
 async function run() {
     const serviceCollection = client.db('assignment11').collection('services');
+    const reviewCollection = client.db('assignment11').collection('reviews');
+
+    //This is for get all services and with limit
 
     app.get('/services', async (req, res) => {
         const limit = parseInt(req.query.limit);
@@ -29,28 +38,34 @@ async function run() {
         const services = await cursor.toArray();
         res.send(services);
     })
+
+    //This is for get single service
+
     app.get('/services/:id', async (req, res) => {
         const id = req.params.id;
-        console.log(id);
         const query = { _id: ObjectId(id) };
         const service = await serviceCollection.findOne(query);
         res.send(service);
+    })
+
+    //post reviews
+
+    app.post('/setReview', async (req, res) => {
+        const review = req.body;
+        console.log(review);
+        const result = await reviewCollection.insertOne(review);
+        res.send(result);
     })
 
 }
 run().catch(err => console.log(err))
 
 
-
+//primary test purpose
 app.get('/', (req, res) => {
     res.send('Server is running');
 })
-
-
-
-
-
-
+//for listen
 app.listen(port, () => {
     console.log('server is running on port', port);
 })
