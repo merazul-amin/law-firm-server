@@ -57,6 +57,17 @@ async function run() {
         res.send(result);
     })
 
+    //get all reviews
+
+    app.get('/reviews', async (req, res) => {
+        const cursor = reviewCollection.find({});
+        const reviews = await cursor.toArray();
+        res.send(reviews);
+    })
+
+
+    //get user reviews
+
 }
 run().catch(err => console.log(err))
 
