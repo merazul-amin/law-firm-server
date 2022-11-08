@@ -57,16 +57,20 @@ async function run() {
         res.send(result);
     })
 
-    //get all reviews
 
-    app.get('/reviews', async (req, res) => {
-        const cursor = reviewCollection.find({});
+    //get all reviews by service id
+
+    app.get('/reviews/:id', async (req, res) => {
+        const id = req.params.id;
+        const query = { serviceId: id };
+        const cursor = reviewCollection.find(query);
         const reviews = await cursor.toArray();
         res.send(reviews);
     })
 
 
     //get user reviews
+
 
 }
 run().catch(err => console.log(err))
