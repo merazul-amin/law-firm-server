@@ -11,7 +11,8 @@
             "Monitoring school governance, including student records, school rules and regulations, and employment matters",
             "Handling special education issues, such as a student not receiving an appropriate education for their abilities. For example, the school may not be accommodating your child needs — or your needs, if you in college — with curriculum changes and equipment."
         ],
-        "cost": "$250"
+        "cost": "$250",
+        "details": "Nowadays education is must for everybody."
     },
     {
         "name": "Trade and Finance Law",
@@ -20,7 +21,8 @@
         "duties": [
             "Ensuring clients rights",
             "Unbeatable confidence",
-            "Always ensuring the customers satisfaction."
+            "Always ensuring the customers satisfaction.",
+            "Providing assistance with trade finance reform"
         ],
         "cost": "$200"
     },
@@ -31,7 +33,8 @@
         "duties": [
             "Ensuring clients rights",
             "Unbeatable confidence",
-            "Always ensuring the customers satisfaction."
+            "Always ensuring the customers satisfaction.",
+            "Providing assistance with law reform"
         ],
         "cost": "$300"
     },
@@ -42,7 +45,8 @@
         "duties": [
             "Ensuring clients rights",
             "Unbeatable confidence",
-            "Always ensuring the customers satisfaction."
+            "Always ensuring the customers satisfaction.",
+            "Providing assistance with corporate reform"
         ],
         "cost": "$400"
     },
@@ -53,7 +57,8 @@
         "duties": [
             "Ensuring clients rights",
             "Unbeatable confidence",
-            "Always ensuring the customers satisfaction."
+            "Always ensuring the customers satisfaction.",
+            "Providing assistance with honest reform"
         ],
         "cost": "$350"
     },
@@ -64,7 +69,8 @@
         "duties": [
             "Ensuring clients rights",
             "Unbeatable confidence",
-            "Always ensuring the customers satisfaction."
+            "Always ensuring the customers satisfaction.",
+            "Providing assistance with family reform"
         ],
         "cost": "$200"
     }
