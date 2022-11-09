@@ -11,8 +11,8 @@
             "Monitoring school governance, including student records, school rules and regulations, and employment matters",
             "Handling special education issues, such as a student not receiving an appropriate education for their abilities. For example, the school may not be accommodating your child needs — or your needs, if you in college — with curriculum changes and equipment."
         ],
-        "cost": "$250",
-        "details": "Nowadays education is must for everybody."
+        "price": "$250",
+        "info": "Nowadays education is must for everybody."
     },
     {
         "name": "Trade and Finance Law",
@@ -24,7 +24,7 @@
             "Always ensuring the customers satisfaction.",
             "Providing assistance with trade finance reform"
         ],
-        "cost": "$200"
+        "price": "$200"
     },
     {
         "name": "Accident Law",
@@ -36,7 +36,7 @@
             "Always ensuring the customers satisfaction.",
             "Providing assistance with law reform"
         ],
-        "cost": "$300"
+        "price": "$300"
     },
     {
         "name": "Corporate Law",
@@ -48,7 +48,7 @@
             "Always ensuring the customers satisfaction.",
             "Providing assistance with corporate reform"
         ],
-        "cost": "$400"
+        "price": "$400"
     },
     {
         "name": "Criminal Law",
@@ -60,7 +60,7 @@
             "Always ensuring the customers satisfaction.",
             "Providing assistance with honest reform"
         ],
-        "cost": "$350"
+        "price": "$350"
     },
     {
         "name": "Family Law",
@@ -72,6 +72,6 @@
             "Always ensuring the customers satisfaction.",
             "Providing assistance with family reform"
         ],
-        "cost": "$200"
+        "price": "$200"
     }
 ]

@@ -39,6 +39,14 @@ async function run() {
         res.send(services);
     })
 
+    // Post Services in db
+
+    app.post('/services', async (req, res) => {
+        const service = req.body;
+        const result = await serviceCollection.insertOne(service);
+        res.send(result);
+    })
+
     //This is for get single service
 
     app.get('/services/:id', async (req, res) => {
