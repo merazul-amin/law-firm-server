@@ -13,6 +13,20 @@ app.use(cors());
 app.use(express.json());
 
 
+//function for check the validity of jwt token
+
+function verify(req, res, next) {
+    const token = req.headers.token;
+    jwt.verify(token, process.env.jwt_code, function (err, decoded) {
+        if (err) {
+            return res.status(403).send({ message: 'Unauthorized User' })
+        }
+        req.decoded = decoded;
+        next()
+    })
+}
+
+
 
 //mongodb client user
 
@@ -89,10 +103,15 @@ async function run() {
 
     //get user reviews
 
-    app.get('/userReviews', async (req, res) => {
+    app.get('/userReviews', verify, async (req, res) => {
         const email = req.query.email;
+
+        if (req.decoded.email !== email) {
+            return res.status(403).send({ message: 'Unauthorized User' })
+        }
+
         const query = { email: email }
-        const cursor = reviewCollection.find(query);
+        const cursor = reviewCollection.find(query).sort({ time: -1 });
         const reviews = await cursor.toArray();
         res.send(reviews);
     })
