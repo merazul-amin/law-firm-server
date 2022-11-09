@@ -54,7 +54,7 @@ async function run() {
         const limit = parseInt(req.query.limit);
         if (limit) {
             const query = {};
-            const cursor = serviceCollection.find(query);
+            const cursor = serviceCollection.find(query).sort({ time: -1 });
             const services = await cursor.limit(limit).toArray();
             return res.send(services);
         }
@@ -114,7 +114,6 @@ async function run() {
             }
         }
         const filter = { _id: ObjectId(id) };
-
         const options = { upsert: true };
         const result = await reviewCollection.updateOne(filter, doc, options);
         res.send(result);
