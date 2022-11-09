@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config()
+require('dotenv').config();
+const jwt = require('jsonwebtoken');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const app = express();
 const port = process.env.PORT || 5000;
@@ -22,6 +23,16 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 async function run() {
     const serviceCollection = client.db('assignment11').collection('services');
     const reviewCollection = client.db('assignment11').collection('reviews');
+
+
+
+    //Implement jwt token
+
+    app.post('/jwt', async (req, res) => {
+        const email = req.body;
+        const token = jwt.sign(email, process.env.jwt_code, { expiresIn: '60h' });
+        res.send({ token });
+    })
 
     //This is for get all services and with limit
 
@@ -70,7 +81,7 @@ async function run() {
     app.get('/reviews/:id', async (req, res) => {
         const id = req.params.id;
         const query = { serviceId: id };
-        const cursor = reviewCollection.find(query);
+        const cursor = reviewCollection.find(query).sort({ time: -1 });
         const reviews = await cursor.toArray();
         res.send(reviews);
     })
